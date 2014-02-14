@@ -29,8 +29,8 @@ window.onload=function() {
     baseElement.id = 'iconicwines';
 
     var
-      headContent = ' <meta charset="utf-8"> <title>Ember Starter Kit</title> <link rel="stylesheet" href="'+baseURL+'css/normalize.css"> <link rel="stylesheet" href="'+baseURL+'css/style.css"> ',
-      bodyContent = ' <script type="text/x-handlebars"> <h2>Welcome to Ember.js</h2> {{outlet}} </script> <script type="text/x-handlebars" id="index"> <ul> {{#each item in model}} <li>{{item}}</li> {{/each}} </ul> </script> ';
+      headContent = ' <meta charset="utf-8"> <title>Ember Starter Kit</title> <link rel="stylesheet" href="'+baseURL+'css/normalize.css"> <link rel="stylesheet" href="'+baseURL+'css/navigation.css"> <link rel="stylesheet" href="'+baseURL+'css/style.css"> ',
+      bodyContent = ' <script type="text/x-handlebars"> <div id="iconic-outer-wrap"> <div id="iconic-inner-wrap"> <header id="iconic-top" role="banner"> <div class="block"> <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a> </div> </header> <nav id="iconic-nav" role="navigation"> <div class="block"> <ul> </ul> <a class="close-btn" id="nav-close-btn" href="#iconic-top">Return to Content</a> </div> </nav> <div id="iconic-main" role="main"> <div class="block"> {{outlet}} </div> </div> </div> <!--/#iconic-inner-wrap--> </div> <!--/#iconic-outer-wrap--> <script src="'+baseURL+'js/libs/navigation.js"></script> </script> <script type="text/x-handlebars" id="index"> <ul> {{#each item in model}} <li>{{item}}</li> {{/each}} </ul> </script> ';
 
     if (isMobile()) {
       document.head.innerHTML = headContent;
@@ -47,6 +47,7 @@ window.onload=function() {
       .script(baseURL+'js/libs/ember-1.3.2.js')
       .script(baseURL+'js/libs/ember-hashbang.js')
       .script(baseURL+'js/libs/ember-fixture.js')
+      .script(baseURL+'js/libs/modernizr.js')
       .script(baseURL+'js/app.js').wait();
   }
 }
