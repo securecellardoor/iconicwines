@@ -45,6 +45,7 @@ window.onload=function() {
       .script(baseURL+'js/libs/jquery-1.10.2.js')
       .script(baseURL+'js/libs/handlebars-1.1.2.js')
       .script(baseURL+'js/libs/ember-1.3.2.js')
+      .script(baseURL+'js/libs/ember-data-1.0.0-beta.js')
       .script(baseURL+'js/libs/ember-hashbang.js')
       .script(baseURL+'js/libs/ember-fixture.js')
       .script(baseURL+'js/libs/modernizr.js')
