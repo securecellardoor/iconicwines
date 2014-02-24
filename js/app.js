@@ -1,15 +1,14 @@
-App = Ember.Application.create();
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true,
 
-App.Router.reopen({
-  location: 'hashbang',
+  rootElement: '#iconicwines',
 });
 
-App.Router.map(function() {
-  // put your routes here
+App.ApplicationAdapter = DS.FixtureAdapter.extend({
+  simulateRemoteResponse: true,
+  latency: 0,
 });
 
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['red', 'yellow', 'blue'];
-  }
+App.ApplicationView = Ember.View.extend({
+  classNames: ['iconic-container'],
 });

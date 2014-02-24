@@ -3,6 +3,8 @@ App.Router.reopen({
 });
 
 App.Router.map(function() {
+  var scrollPosition = 0;
+
   this.resource('cart', { path: '/cart' });
 
   this.resource('merchandise', { path: '/merchandise/:anchor' });
