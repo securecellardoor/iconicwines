@@ -1,0 +1,47 @@
+/* ------ Adjustments for color ------ */
+
+#iconicwines .iconic-container {
+  font-family: inherit;
+}
+
+#iconicwines .iconic-name {
+  color: rgb(103, 143, 108);
+}
+
+#iconicwines .iconic-link {
+  color: rgb(186, 51, 46);
+}
+
+#iconicwines .iconic-button input, #iconicwines .iconic-button a {
+  background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+  background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+  color: #666666;
+}
+
+
+/* ------ Buttons ------ */
+  #iconicwines .iconic-button input, #iconicwines .iconic-button a { background-repeat: repeat-x; border: 1px solid #d2d2d2; border-radius: 3px; box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1); font-weight: normal; }
+  #iconicwines .iconic-button input, #iconicwines .iconic-button a { font-size: .8em; line-height: 1.428571429; padding: 4px 9px; }
+
+
+/* ------ Flash ------ */
+  #iconicwines .iconic-flash { bottom: 0; min-height: 2em; margin: 0; padding: 0; position: fixed; width: 100%; z-index: 1000; }
+  #iconicwines .iconic-flash { display: none; } /* ------ REMOVE ME ------ */
+  #iconicwines .iconic-flash div { background-color: #333333; padding: 8px; }
+  #iconicwines .iconic-flash div p { background-color: transparent; font-size: 15px; font-style: italic; margin: 0; padding: 0; text-align: center; }
+  #iconicwines .iconic-flash .iconic-fail { color: #FC6044; }
+  #iconicwines .iconic-flash .iconic-info { color: #3d98c2; }
+  #iconicwines .iconic-flash .iconic-pass { color: #2DAC27; }
+
+
+/* ------ Footer ------ */
+  #iconicwines .iconic-container .iconic-footer-link { clear: both; margin: 50px 0 15px; text-align: center; }
+  #iconicwines .iconic-container .iconic-footer-link p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 13px; }
+
+
+/* ------ Layout ------ */
+  #iconicwines .iconic-container { max-width: 640px; margin: 0 auto; }
