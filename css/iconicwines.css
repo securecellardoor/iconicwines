@@ -28,8 +28,18 @@
   #iconicwines .iconic-button input, #iconicwines .iconic-button a { font-size: .8em; line-height: 1.428571429; padding: 4px 9px; }
 
 
+/* ------ Categories ------ */
+  #iconicwines .iconic-category { margin: 32px 0 8px; }
+  #iconicwines .iconic-category:nth-child(1) { margin-top: 0; }
+  #iconicwines .iconic-category .iconic-category-name { font-size: 24px; font-weight: 700; line-height: 30px; }
+
+
+/* ------ Discounts ------ */
+  #iconicwines .iconic-listing.iconic-discount { font-size: 18px; font-weight: 700; line-height: 22px; text-align: center; text-transform: lowercase; }
+
+
 /* ------ Flash ------ */
-  #iconicwines .iconic-flash { bottom: 0; min-height: 2em; margin: 0; padding: 0; position: fixed; width: 100%; z-index: 1000; }
+  #iconicwines .iconic-flash { bottom: 0; min-height: 32px; margin: 0; padding: 0; position: fixed; width: 100%; z-index: 1000; }
   #iconicwines .iconic-flash { display: none; } /* ------ REMOVE ME ------ */
   #iconicwines .iconic-flash div { background-color: #333333; padding: 8px; }
   #iconicwines .iconic-flash div p { background-color: transparent; font-size: 15px; font-style: italic; margin: 0; padding: 0; text-align: center; }
@@ -45,3 +55,148 @@
 
 /* ------ Layout ------ */
   #iconicwines .iconic-container { max-width: 640px; margin: 0 auto; }
+
+
+/* ------ Messages ------ */
+  #iconicwines .iconic-listing.iconic-message { margin: 8px 0; }
+  #iconicwines .iconic-listing.iconic-message { font-size: 16px; line-height: 22px; }
+  #iconicwines .iconic-listing.iconic-message * { font-size: inherit; line-height: inherit; text-align: center; }
+
+
+/* ------ Merchandise ------ */
+  #iconicwines .iconic-merchandise .iconic-image { clear: none; float: left; margin: 0 16px 8px 0; }
+  #iconicwines .iconic-product.iconic-merchandise .iconic-image { max-width: 50%; min-width: 40%; }
+
+
+/* ------ Mixed Packs ------ */
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-awards { white-space: nowrap; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-bottle { max-height: 81px; max-width: 50%; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-bottle img { max-height: 100%; max-width: 100%; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-included { font-weight: 700; margin-top: 16px; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-item { float: left; margin-right: 16px; max-width: 40%; min-width: 30%; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-item img { width: 100%; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-mixed-product { margin: 24px 0; vertical-align: middle; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-mixed-product .iconic-details.iconic-merchandise .iconic-quantity { font-weight: 700; margin: 16px 0 8px; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-mixed-product .iconic-details.iconic-wine * { display: inline-block; vertical-align: middle; }
+  #iconicwines .iconic-product.iconic-mixed-pack .iconic-mixed-product .iconic-name { font-size: 18px; font-weight: 700; line-height: 24px; margin: 8px 0; }
+
+
+/* ------ Prices ------ */
+  #iconicwines .iconic-prices { color: #666; font-size: 10px; line-height: 13px; }
+  #iconicwines .iconic-prices { position: relative; }
+  #iconicwines .iconic-prices .iconic-price { display: inline-block; margin: 5px 3px; text-align: center; vertical-align: middle; }
+  #iconicwines .iconic-prices .iconic-price { background-color: white; border: solid 1px #ddd; border-radius: 8px; padding: 4px; }
+  #iconicwines .iconic-prices .iconic-price {
+    -webkit-transform:rotate(-2deg);
+    -o-transform:rotate(-2deg);
+    -moz-transform:rotate(-2deg);
+  }
+
+  #iconicwines .iconic-prices .iconic-price:nth-child(even) {
+    -o-transform:rotate(1deg);
+    -webkit-transform:rotate(1deg);
+    -moz-transform:rotate(1deg);
+    position:relative;
+    top:2px;
+  }
+  #iconicwines .iconic-prices .iconic-price:nth-child(3n) {
+    -o-transform:rotate(-1deg);
+    -webkit-transform:rotate(-1deg);
+    -moz-transform:rotate(-1deg);
+    position:relative;
+    top:-2px;
+  }
+  #iconicwines .iconic-prices .iconic-price:nth-child(10n) {
+    -o-transform:rotate(2deg);
+    -webkit-transform:rotate(2deg);
+    -moz-transform:rotate(2deg);
+    position:relative;
+    top:-3px;
+  }
+
+  #iconicwines .iconic-prices .iconic-card { display: table-cell; vertical-align: middle; padding: 0px 12px; }
+  #iconicwines .iconic-prices .iconic-card * { white-space: nowrap; }
+  #iconicwines .iconic-prices .iconic-card * span { font-size: 10px; font-weight: 400; line-height: 12px; vertical-align: text-top; }
+  #iconicwines .iconic-prices .iconic-card .iconic-cost { color: #4b4b4b; font-size: 28px; font-weight: 700; letter-spacing: 0px; line-height: 30px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-cost span { font-size: 12px; line-height: 26px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-free-shipping { color: #4b4b4b; font-size: 24px; font-weight: 700; line-height: 24px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-free-shipping > div { margin-top: 4px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-rrp { color: #999; font-size: 14px; line-height: 7px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-saving { color: #999; font-size: 14px; line-height: 14px; margin-top: 4px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-shipping { color: #aaa; font-size: 14px; font-weight: 700; letter-spacing: 1px; line-height: 14px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-shipping > div { margin-bottom: 8px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-tag { max-width: 105px; }
+  #iconicwines .iconic-prices .iconic-card .iconic-tag span { white-space: normal; }
+  #iconicwines .iconic-prices .iconic-card .iconic-unit { color: #4b4b4b; font-size: 14px; font-weight: 700; line-height: 14px;  }
+  #iconicwines .iconic-prices .iconic-card .iconic-unit span { font-size: 9px; line-height: 13px; }
+
+
+/* ------ Products ------ */
+  #iconicwines .iconic-product { margin: 16px 0; }
+  #iconicwines .iconic-product .iconic-add-to-cart { display: inline-block; margin: 16px 0; text-align: center; }
+  #iconicwines .iconic-product .iconic-analysis { font-weight: 700; }
+  #iconicwines .iconic-product .iconic-consumer_info { font-weight: 700; }
+  #iconicwines .iconic-product .iconic-content { line-height: 22px; }
+  #iconicwines .iconic-product .iconic-name { margin-bottom: 16px; }
+
+
+/* ------ Shared ------ */
+  #iconicwines .iconic-action { clear: right; float: right; margin-left: 16px; max-width: 40%; min-width: 30%; text-align: center; }
+  #iconicwines .iconic-bottles-left,
+    #iconicwines .iconic-cases-left,
+    #iconicwines .iconic-items_left,
+    #iconicwines .iconic-number-left,
+    #iconicwines .iconic-packs-left { font-size: 16px; font-weight:700; line-height: 24px; }
+  #iconicwines .iconic-image img {  width: 100%; }
+  #iconicwines .iconic-name { font-size: 20px; font-weight: 700; line-height: 24px; margin-bottom: 16px; }
+  #iconicwines .iconic-notes a { white-space: nowrap; }
+  #iconicwines .iconic-notes .iconic-header { font-weight: 700; margin-bottom: 8px; }
+  #iconicwines .iconic-prices { clear: right; float: right; margin-left: 16px; padding-bottom: 8px; text-align: center; }
+  #iconicwines .iconic-varieties { font-weight: 700; }
+
+
+/* ------ Winelist ------ */
+  #iconicwines .iconic-winelist table { width: 100%; }
+  #iconicwines .iconic-winelist td { vertical-align: top; }
+  #iconicwines .iconic-winelist .iconic-add-to-cart { margin: 8px 0; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-awards { margin: 8px 0; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-bottle { margin-right: 0%; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-category-name { padding-bottom: 30px; }
+  #iconicwines .iconic-winelist .iconic-content { font-size: 16px; line-height: 24px; }
+  #iconicwines .iconic-winelist .iconic-listing { margin: 30px 0; overflow: auto; width: 100%; }
+  #iconicwines .iconic-winelist .iconic-listing.iconic-merchandise,
+  #iconicwines .iconic-winelist .iconic-listing.iconic-mixed-pack,
+  #iconicwines .iconic-winelist .iconic-listing.iconic-wine { border-bottom: groove 2px #ddd; padding-bottom: 30px; }
+  #iconicwines .iconic-winelist .iconic-merchandise .iconic-image { float: left; padding-right: 16px; }
+  #iconicwines .iconic-winelist .iconic-merchandise .iconic-image { max-width: 40%; min-width: 30%; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-mixed-products { float: left; padding-right: 16px; }
+  #iconicwines .iconic-winelist .iconic-mixed-products { width: 40%; }
+  #iconicwines .iconic-winelist .iconic-mixed-product { margin-bottom: 8px; }
+  #iconicwines .iconic-winelist .iconic-mixed-product img { max-width: 100%; max-height: 100px; }
+  #iconicwines .iconic-winelist .iconic-notes { font-size: 16px; line-height: 22px; }
+  #iconicwines .iconic-winelist .iconic-varieties { font-size: 14px; margin: 8px 0; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-wine .iconic-image img { width: 100%; }
+
+
+/* ------ Wines ------ */
+  #iconicwines .iconic-product.iconic-wine .iconic-awards li { font-size: 16px; margin-bottom: 16px; min-height: 50px; }
+  #iconicwines .iconic-product.iconic-wine .iconic-awards li:first-of-type { margin-top: 24px; }
+  #iconicwines .iconic-product.iconic-wine .iconic-awards li img { float: left; width: 50px; }
+  #iconicwines .iconic-product.iconic-wine .iconic-awards li > * { vertical-align: top; }
+  #iconicwines .iconic-product.iconic-wine .iconic-awards li > div { display: block; padding-left: 60px; text-align: left; }
+  #iconicwines .iconic-product.iconic-wine .iconic-image { clear: both; float: right; margin-left: 16px; max-width: 40%; min-width: 30%; text-align: center; }
+  #iconicwines .iconic-product.iconic-wine .iconic-bottle_specs > div { padding-bottom: 8px; }
+  #iconicwines .iconic-product.iconic-wine .iconic-notes { padding-bottom: 16px; }
+  #iconicwines .iconic-product.iconic-wine .iconic-vintages { margin: 16px 0; text-align: center; white-space: nowrap; }
+  #iconicwines .iconic-product.iconic-wine .iconic-year { font-size: 2em; }
+
+
+@media screen and (max-width: 45em) {
+  #iconicwines .iconic-prices .iconic-card { margin: 0; padding: 4px 8px; }
+}
+
+@media screen and (min-width: 45.0625em) {
+  #iconicwines .iconic-container {
+    padding: 8px;
+  }
+}
