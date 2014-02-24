@@ -1,4 +1,58 @@
-/* Put your CSS here */
-.ember-application {
-    margin: 20px;
+#iconicwines {
+  font-size: 16px;
+  text-align: left;
+}
+
+#iconicwines .iconic-container, #iconicwines .iconic-container * {
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#iconicwines a,
+#iconicwines a:hover,
+#iconicwines a:link,
+#iconicwines a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+#iconicwines div {
+  display: block;
+}
+
+#iconicwines i {
+}
+
+#iconicwines img {
+  display: inline;
+}
+
+#iconicwines li {
+  content: none;
+  display: block;
+  list-style: none;
+}
+
+#iconicwines li:after, #iconicwines li:before {
+  content: none;
+}
+
+#iconicwines p {
+  display: block;
+}
+
+#iconicwines span {
+  display: inline;
+}
+
+#iconicwines ul {
+  display: block;
+  text-decoration: none;
 }
