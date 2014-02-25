@@ -12,3 +12,5 @@
 #ember-testing {
   zoom: 50%;
 }
+
+#iconicwines li.fail > .test-message { font-size: 2em; }
