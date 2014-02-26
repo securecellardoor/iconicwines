@@ -11,6 +11,7 @@ if (window.location.search.indexOf("?test") !== -1) {
     '<script src="tests/tests.js"></script>',
     '<script src="tests/helpers.js"></script>' +
     '<script src="tests/integration/price_test.js"></script>',
+    '<script src="tests/integration/wine_test.js"></script>',
     '<script src="tests/integration/winelist_test.js"></script>'
   )
 }
