@@ -49,12 +49,13 @@
 
 
 /* ------ Footer ------ */
-  #iconicwines .iconic-container .iconic-footer-link { clear: both; margin: 50px 0 15px; text-align: center; }
+  #iconicwines .iconic-container .iconic-footer-link { clear: both; padding: 50px 0 15px; text-align: center; }
   #iconicwines .iconic-container .iconic-footer-link p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 13px; }
 
 
 /* ------ Layout ------ */
   #iconicwines .iconic-container { max-width: 640px; margin: 0 auto; }
+  #iconicwines #iconic-main { padding: 8px; }
 
 
 /* ------ Messages ------ */
@@ -132,7 +133,7 @@
 
 
 /* ------ Products ------ */
-  #iconicwines .iconic-product { margin: 16px 0; }
+  #iconicwines .iconic-product { padding: 16px 0; }
   #iconicwines .iconic-product .iconic-add-to-cart { display: inline-block; margin: 16px 0; text-align: center; }
   #iconicwines .iconic-product .iconic-analysis { font-weight: 700; }
   #iconicwines .iconic-product .iconic-consumer_info { font-weight: 700; }
@@ -169,6 +170,8 @@
   #iconicwines .iconic-winelist .iconic-listing.iconic-wine { border-bottom: groove 2px #ddd; padding-bottom: 30px; }
   #iconicwines .iconic-winelist .iconic-merchandise .iconic-image { float: left; padding-right: 16px; }
   #iconicwines .iconic-winelist .iconic-merchandise .iconic-image { max-width: 40%; min-width: 30%; text-align: center; }
+  #iconicwines .iconic-winelist .iconic-mixed-pack .iconic-prices { min-width: 52%; }
+  #iconicwines .iconic-winelist .iconic-mixed-pack .iconic-notes { margin-left: 40%; }
   #iconicwines .iconic-winelist .iconic-mixed-products { float: left; padding-right: 16px; }
   #iconicwines .iconic-winelist .iconic-mixed-products { width: 40%; }
   #iconicwines .iconic-winelist .iconic-mixed-product { margin-bottom: 8px; }
@@ -192,11 +195,10 @@
 
 
 @media screen and (max-width: 45em) {
+  #iconicwines { background: white url('../images/background.png') left top repeat; }
   #iconicwines .iconic-prices .iconic-card { margin: 0; padding: 4px 8px; }
+
 }
 
 @media screen and (min-width: 45.0625em) {
-  #iconicwines .iconic-container {
-    padding: 8px;
-  }
 }

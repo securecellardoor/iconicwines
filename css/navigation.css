@@ -165,10 +165,6 @@
     top: 0.75em;
     left: 1.875em;
   }
-  #iconic-main {
-    background: white url('../images/background.png') left top repeat;
-    min-height: 600px;
-  }
 
   footer[role="contentinfo"] {
     background: #ddd;
@@ -335,7 +331,7 @@
   #iconicwines #iconic-nav {
     padding-top: 1em;
   }
-  #iconicwines #iconic-nav .mobile-only {
+  #iconicwines #iconic-nav .mobile-only, #iconicwines #iconic-nav .mobile-only * {
     display: none;
   }
   #iconicwines #iconic-nav .close-btn {

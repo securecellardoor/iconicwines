@@ -5,7 +5,7 @@ App = Ember.Application.create({
 });
 
 production = false;
-production = true;
+// production = true;
 if (production) {
 
   App.ApplicationAdapter = DS.ActiveModelAdapter.extend({

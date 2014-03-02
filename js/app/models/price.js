@@ -1,6 +1,9 @@
 App.Price = DS.Model.extend({
-  wine:           DS.belongsTo('wine'),
+  // merchandise:    DS.belongsTo('merchandise'),
+  // mixedPack:      DS.belongsTo('mixedPack'),
+  wines:           DS.hasMany('wine', { async: true }),
   tag:            DS.belongsTo('tag', { async: true }),
+  name:           DS.attr('string'),
 
   amountOff:      DS.attr('boolean'),
   percentageOff:  DS.attr('boolean'),
@@ -9,19 +12,19 @@ App.Price = DS.Model.extend({
   amount:         DS.attr('string'),
   quantity:       DS.attr('string'),
 
-  cost:           DS.attr('number'),
-  discount:       DS.attr('number'),
-  rrp:            DS.attr('number'),
-  saving:         DS.attr('number'),
+  cost:           DS.attr('string'),
+  discount:       DS.attr('string'),
+  rrp:            DS.attr('string'),
+  saving:         DS.attr('string'),
   type:           DS.attr('string'),
 
   freeShipping: function() {
     if (this.get('shipping')) {
-      if (this.get('fixedPrice') && this.get('cost') === 0) {
+      if (this.get('fixedPrice') && this.get('cost') == 0) {
         return true;
       }
 
-      if (this.get('percentageOff') && this.get('discount') === 100) {
+      if (this.get('percentageOff') && this.get('discount') == 100) {
         return true;
       }
     }
@@ -50,6 +53,8 @@ App.Price.FIXTURES = [
     rrp: 100,
     saving: 10,
     type: 'price',
+
+    wines: [3],
   },
   {
     id: 2,
@@ -757,6 +762,8 @@ App.Price.FIXTURES = [
 
     discount: 100,
     type: 'shipping',
+
+    wines: [3],
   },
   {
     id: 63,
@@ -768,6 +775,8 @@ App.Price.FIXTURES = [
 
     cost: 0,
     type: 'shipping',
+
+    wines: [3],
   },
   {
     id: 64,
@@ -778,7 +787,7 @@ App.Price.FIXTURES = [
     orMore: true,
     quantity: 12,
 
-    discount: 100,
+    discount: '100',
     type: 'shipping',
   },
   {

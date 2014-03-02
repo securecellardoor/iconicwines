@@ -14,29 +14,29 @@ App.Category = DS.Model.extend({
 
   anchor:           DS.attr('string'),
   name:             DS.attr('string'),
-  position:         DS.attr('integer'),
+  position:         DS.attr('number'),
 });
 
 App.ProductListing = DS.Model.extend({
   winelist:           DS.belongsTo('winelist'),
   category:           DS.belongsTo('category'),
 
-  listableType:       DS.attr('string'),
+  listableType:        DS.attr('string'),
   merchandise:        DS.belongsTo('merchandise'),
   mixedPack:          DS.belongsTo('mixedPack'),
   wine:               DS.belongsTo('wine'),
 
   discount:           DS.attr('string'),
-  maximum_per_order:  DS.attr('sting'),
+  maximum_per_order:  DS.attr('string'),
   message:            DS.attr('string'),
-  minimum_per_order:  DS.attr('sting'),
-  number_available:   DS.attr('sting'),
-  position:           DS.attr('integer'),
+  minimum_per_order:  DS.attr('string'),
+  number_available:   DS.attr('string'),
+  position:           DS.attr('number'),
 });
 
 App.Winelist.FIXTURES = [
   {
-    id: 1,
+    id: 'online',
     name: 'Online',
     anchor: 'online',
     categories: [1,2],

@@ -113,7 +113,7 @@
           {{view App.ActionView contextBinding="this"}}
           <div class="iconic-content">
             <div class="iconic-notes">
-              {{description}}
+              {{htmlsafe description}}
               <span class="iconic-link">{{#link-to 'merchandise' anchor}}read more{{/link-to}}</span>
             </div>
           </div>
@@ -132,24 +132,22 @@
     {{#with mixedPack as mixedPack}}
       <div>
         <div class="iconic-name">{{#link-to 'mixed-pack' mixedPack.anchor}}{{mixedPack.name}}{{/link-to}}</div>
-        <div class="iconic-mixed-products">
-          <ul>
-            {{#each mixedProduct in mixedPack.mixedProducts}}
-              <li class="iconic-mixed-product">
-                <div class="iconic-product-details">
-                  <div class="iconic-bottle">
-                    {{view App.ListedPackedProductView contextBinding="mixedProduct"}}
-                  </div>
-                </div>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
         {{view App.PricesView contextBinding="mixedPack"}}
-        {{view App.ActionView contextBinding="this"}}
-        <div>
+        <ul class="iconic-mixed-products">
+          {{#each mixedProduct in mixedPack.mixedProducts}}
+            <li class="iconic-mixed-product">
+              <div class="iconic-product-details">
+                <div class="iconic-bottle">
+                  {{view App.ListedPackedProductView contextBinding="mixedProduct"}}
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+        {{view App.ActionView contextBinding="mixedPack"}}
+        <div class="iconic-content">
           <div class="iconic-notes">
-            {{mixedPack.description}}
+            {{htmlsafe mixedPack.description}}
             <span class="iconic-link">{{#link-to 'mixed-pack' mixedPack.anchor}}read more{{/link-to}}</span>
           </div>
         </div>
@@ -250,7 +248,7 @@
     </div>
     <div class="iconic-details iconic-merchandise">
       <div class="iconic-quantity">{{quantity}} {{pluralize quantity merchandise.unitName}}</div>
-      <div class="iconic-description">{{merchandise.description}}</div>
+      <div class="iconic-description">{{htmlsafe merchandise.description}}</div>
     </div>
   </script>
 
@@ -269,8 +267,9 @@
   </script>
 
   <script type="text/x-handlebars" id="prices">
+    -{{prices.length}}-
     {{#with this as product}}
-      {{#each price in product.prices}}
+      {{#each price in prices}}
         {{#if price.type}}{{view App.PriceView contextBinding="price"}}{{/if}}
       {{/each}}
     {{/with}}
@@ -337,7 +336,8 @@
   <script type="text/x-handlebars" id="wine">
     <div class="iconic-product iconic-wine">
       <div class="iconic-name">{{name}}</div>
-      {{view App.PricesView contextBinding="model"}}
+    -{{App.prices.length}}-
+      {{render 'prices'}}
       {{view App.ActionView contextBinding="model"}}
       <div class="iconic-image">
         <img alt="2008 Wattle Farm Cabernet Sauvignon" src="http://images.scd.imasocialretard.com/images/wine/photo/393/normal_2008-wattle-farm-dry-land-cabernet-sauvignon.20121116154743.png">
@@ -361,14 +361,18 @@
             </li>
           {{/each}}
         </ul>
-        <div class="iconic-notes iconic-vintage-report">
-          <div class="iconic-header">Vintage report</div>
-          {{htmlsafe vintageReport}}
-        </div>
-        <div class="iconic-notes iconic-maturation">
-          <div class="iconic-header">Winemaking</div>
-          {{htmlsafe maturation}}
-        </div>
+        {{#if vintageReport}}
+          <div class="iconic-notes iconic-vintage-report">
+            <div class="iconic-header">Vintage report</div>
+            {{htmlsafe vintageReport}}
+          </div>
+        {{/if}}
+        {{#if maturation}}
+          <div class="iconic-notes iconic-maturation">
+            <div class="iconic-header">Winemaking</div>
+            {{htmlsafe maturation}}
+          </div>
+        {{/if}}
         <div class="iconic-bottle-specs">
           <div class="iconic-consumer-info"><span class="iconic-alcohol">15% alcohol</span></div>
           <div class="iconic-analysis"><span>Titratable acid </span><span>6.9g/L</span> : <span>pH </span><span>3.45</span></div>
@@ -407,9 +411,11 @@
   <script src="js/libs/ember-fixture.js"></script>
   <script src="js/libs/modernizr.js"></script>
   <!-- WAIT JAVASCRIPT -->
-  <script src="js/app.js"></script>
-  <script src="js/router.js"></script>
+  <script src="js/config/app.js"></script>
+  <script src="js/config/router.js"></script>
   <script src="js/app/controllers/application_controller.js"></script>
+  <script src="js/app/controllers/wines_controller.js"></script>
+  <script src="js/app/controllers/prices_controller.js"></script>
   <script src="js/app/helpers/handlebars_helper.js"></script>
   <script src="js/app/models/merchandise.js"></script>
   <script src="js/app/models/mixed_pack.js"></script>

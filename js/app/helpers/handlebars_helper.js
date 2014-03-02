@@ -60,8 +60,11 @@ Ember.Handlebars.helper('perUnit', function(amount, quantity, product, orMore, s
     }
   }
   if (quantity > 1) {
+    // suffix = orMore ? 'or more' : multipleName;
+    // prefix = orMore ? '' : 'per';
+    prefix = 'per';
+    if (orMore) { prefix = shipping ? 'for' : ''; }
     suffix = orMore ? 'or more' : multipleName;
-    prefix = orMore ? 'for' : 'per';
   }
 
   if (!freeShipping)  { middle = '</span><span>'; }

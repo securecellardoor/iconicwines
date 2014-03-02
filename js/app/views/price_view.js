@@ -51,6 +51,7 @@ App.PriceRrpView = Ember.View.extend({
   classNames: ['iconic-rrp'],
   templateName: function() {
     var price = this.get('context');
+    if (!price.get('rrp')) { return; }
 
     if (price.get('orMore')) { return; }
     if (price.get('amount') || price.get('tag')) { return; }
@@ -88,7 +89,7 @@ App.PriceTagView = Ember.View.extend({
   templateName: function() {
     var price = this.get('context');
 
-    if (!price.get('tag') || price.get('quantity') == 1) { return; }
+    if (!price.get('tag')) { return; }
     return 'price-tag';
   }.property('context'),
 });

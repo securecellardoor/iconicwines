@@ -1,26 +1,23 @@
 DS.FixtureAdapter.reopen({
-  queryFixtures: function(records, query, type) {
+  find: function(store, type, id) {
+    var fixtures = this.fixturesForType(type),
+        fixture;
 
-    if ( query.id && Ember.isArray(query.id) ) {
-      query.id = query.id.map(function(id) {
-      return id + '';
-      });
-    }
-    return records.filter(function(record) {
+    Ember.assert("Unable to find fixtures for model type "+type.toString(), fixtures);
 
-      for(var key in query) {
-        if (!query.hasOwnProperty(key)) { continue; }
-
-        var queryValue = query[key],
-          value = record[key];
-
-        if ( Ember.isArray(queryValue) ) {
-          if ( queryValue.contains(value) === false ) { return false; }
-        } else {
-          if ( value !== queryValue ) { return false; }
-        }
+    if (fixtures) {
+      if ($.inArray(type, [App.Merchandise, 'App.MixedPack', App.Wine, App.Winelist]) > -1) {
+        fixture = Ember.A(fixtures).findProperty('anchor', id);
+        if (!fixture) { fixture = Ember.A(fixtures).findProperty('id', id); }
+      } else {
+        fixture = Ember.A(fixtures).findProperty('id', id);
       }
-      return true;
-    });
+    }
+
+    if (fixture) {
+      return this.simulateRemoteCall(function() {
+        return fixture;
+      }, this);
+    }
   },
 });

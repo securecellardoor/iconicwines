@@ -35,7 +35,7 @@ App.Award = DS.Model.extend({
   description:  DS.attr('string'),
   name:         DS.attr('string'),
   photo:        DS.attr('string'),
-  position:     DS.attr('integer'),
+  position:     DS.attr('number'),
   year:         DS.attr('string'),
 });
 
@@ -50,7 +50,7 @@ App.Variety = DS.Model.extend({
   region:     DS.belongsTo('region'),
 
   name:       DS.attr('string'),
-  percentage: DS.attr('integer'),
+  percentage: DS.attr('number'),
 });
 
 App.Wine.FIXTURES = [
@@ -65,7 +65,7 @@ App.Wine.FIXTURES = [
     year: '2012',
 
     awards: [1, 2, 3, 4, 5],
-    prices: [1, 62, 63],
+    // prices: [1, 62, 63],
     regions: [1],
   },
   {
@@ -78,7 +78,7 @@ App.Wine.FIXTURES = [
     vintageReport: 'Drought like conditions during the peak of the growing season accelerated the development of the vines.&nbsp; The cooler temperatures in January and February resulted in even ripening and an opportunity to pick prior to the heat wave. 2008 Clare Valley reds show full ripeness, intense tannins and colour.&nbsp; Wines with longevity.',
     year: '2012',
 
-    prices: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 61, 62, 63, 64, 65, 66],
+    // prices: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 61, 62, 63, 64, 65, 66],
   },
 ];
 

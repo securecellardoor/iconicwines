@@ -1,5 +1,5 @@
 App.MixedPack = DS.Model.extend({
-  prices:                     DS.hasMany('price', { async: true }),
+  prices:                     DS.hasMany('price'),
   mixedProducts:              DS.hasMany('mixedProduct', { async: true }),
 
   anchor:                     DS.attr('string'),
@@ -9,7 +9,7 @@ App.MixedPack = DS.Model.extend({
   photo:                      DS.attr('string'),
   qualifyForPriceDiscount:    DS.attr('string'),
   qualifyForShippingDiscount: DS.attr('string'),
-  quantity:                   DS.attr('integer'),
+  quantity:                   DS.attr('number'),
   receivePriceDiscount:       DS.attr('string'),
   receiveShippingDiscount:    DS.attr('string'),
   releaseDate:                DS.attr('date'),
@@ -24,7 +24,7 @@ App.MixedProduct = DS.Model.extend({
   merchandise:  DS.belongsTo('merchandise'),
   wine:         DS.belongsTo('wine'),
 
-  quantity:     DS.attr('integer'),
+  quantity:     DS.attr('number'),
 });
 
 App.MixedPack.FIXTURES = [
@@ -35,7 +35,7 @@ App.MixedPack.FIXTURES = [
     name: 'Non deliverable Mixed Pack (TEST ONLY)',
     quantity: 7,
 
-    prices: [1, 61],
+    // prices: [1, 61],
     mixedProducts: [3, 5, 6, 7, 8],
   },
 ];
