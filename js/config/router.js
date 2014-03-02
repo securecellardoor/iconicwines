@@ -23,17 +23,19 @@ Ember.Route.reopen({
 
 App.MerchandiseRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('merchandise', { anchor: params.anchor }).then(function(array) {
-      return array.get('firstObject');
-    });
+    return this.store.find('merchandise', params.anchor || '');
   },
 });
 
 App.MixedPackRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('mixedPack', { anchor: params.anchor }).then(function(array) {
-      return array.get('firstObject');
-    });
+    return this.store.find('mixedPack', params.anchor || '');
+  },
+});
+
+App.PricesRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('price');
   },
 });
 
@@ -45,18 +47,19 @@ App.WinelistRoute = Ember.Route.extend({
     Ember.Route.scrollPosition = $(document).scrollTop();
   },
   model: function(params) {
-    var options = {}
-    if (params.anchor) { options = { anchor: params.anchor } }
-    return this.store.find('winelist', options).then(function(array) {
-      return array.get('firstObject');
-    });
+    if (params.anchor) {
+      return this.store.find('winelist', params.anchor);
+    } else {
+      return this.store.find('winelist').then(function(array) {
+        return array.get('firstObject');
+      });
+    }
+
   },
 });
 
 App.WineRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('wine', { anchor: params.anchor }).then(function(array) {
-      return array.get('firstObject');
-    });
+    return this.store.find('wine', params.anchor || '');
   },
 });
